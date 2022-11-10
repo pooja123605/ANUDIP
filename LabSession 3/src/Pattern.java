@@ -1,6 +1,4 @@
-import java.util.*;
-public class Pattern 
-{
+
 	public static void main(String[] args) 
 	{
 		int r1,r,c,d;
@@ -12,7 +10,9 @@ public class Pattern
 			System.out.println("*");
 			for(c=0;c<=r1;c++)
 			{
-				if(r==r1-1)
+				iimport java.util.*;
+public class Pattern 
+{f(r==r1-1)
 					System.out.print("*");
 				else
 				System.out.print("");
