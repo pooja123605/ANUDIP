@@ -1,0 +1,196 @@
+mysql> CREATE TABLE PARENT(P_ID int primary key,P_NAME varchar(20),CITY varchar(30),AGE int,P_INCOME int,P_OCCUPATION varchar(20),EMAILID varchar(50));
+ERROR 1046 (3D000): No database selected
+mysql> CREATE DATABASE parents;
+Query OK, 1 row affected (0.08 sec)
+
+mysql> use parents;
+Database changed
+mysql> CREATE TABLE PARENT(P_ID int primary key,P_NAME varchar(20),CITY varchar(30),AGE int,P_INCOME int,P_OCCUPATION varchar(20),EMAILID varchar(50));
+Query OK, 0 rows affected (0.62 sec)
+
+mysql> insert into PARENT values(1,"MADHAVI PAWAR","PUNE",23,500000,"TEACHER","MADHAVI123@GMAIL.COM");
+Query OK, 1 row affected (0.17 sec)
+
+mysql> insert into PARENT values(2,"VAISHNAVI PAWAR","MUMBAI",25,600000,"VAISH623@GMAIL.COM");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into PARENT values(2,"VAISHNAVI PAWAR","MUMBAI",25,600000,"CLERK","VAISH623@GMAIL.COM");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into PARENT values(3,"GEETU MANE","NAGPUR",35,70000,"SOFTWARE ENGINEER","GEETU623@GMAIL.COM");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into PARENT values(4,"RAGHAV PRAKSH","DELHI",34,90000,"MECHANICAL ENGINEER","RAGHAV23@GMAIL.COM");
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into PARENT values(5,"PRERANA BHOSALE","PUNE",33,90000,"CIVIL ENGINEER","PRERANA23@GMAIL.COM");
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into PARENT values(6,"NEHA LOHAR","SATARA",33,80000,"TEACHER","NEHA23@GMAIL.COM");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into PARENT values(7,"SEEMA PATIL","MUMBAI",33,12000,"HOUSE WIFE","SEEMA23@GMAIL.COM");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into PARENT values(8,"RADHA DALVI","KATRAJ",33,18000,"DANCER","RADHA23@GMAIL.COM");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into PARENT values(9,"RAJU KHAN","AKURDI",30,45000,"FIREMEN","RAJU23@GMAIL.COM");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into PARENT values(10,"ANU THAKUR","DEHU",30,40000,"SHIEF","ANU23@GMAIL.COM");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into PARENT values(11,"TANU BHISTE","MOSHI",27,49000,"POLICE","TANU23@GMAIL.COM");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into PARENT values(12,"ARTI BHAKARE","ALANDI",38,13000,"HOUSE WIFE","ARTI23@GMAIL.COM");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into PARENT values(13,"SAKASHI KACHARE","NIGIDI",48,35000,"DR.","SAKASHI23@GMAIL.COM");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into PARENT values(14,"GAURI PAWAR","NIGIDI",50,37000,"DENTIST","GAURI23@GMAIL.COM");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into PARENT values(15,"PANKAJ GAWARE","HAPUR",24,35600,"COMPUTER ENGINEER","PANAKJ23@GMAIL.COM");
+Query OK, 1 row affected (0.18 sec)
+
+mysql> insert into PARENT values(16,"SHUBHAM GHADAGE","AKURDI STATION",22,60000,"CIVIL ENGINEER","SHUBHAM23@GMAIL.COM");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into PARENT values(17,"SHRUSHTI NALE","MOSHI",45,38000,"TEACHER","SHRUSHTI23@GMAIL.COM");
+Query OK, 1 row affected (0.13 sec)
+
+mysql> insert into PARENT values(18,"SUSHANT SUTAR","PUNE STATION",49,20000,"WRITER","SUSHASNT23@GMAIL.COM");
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into PARENT values(19,"PUNAM SUTAR","DELHI",55,10000,"TRAINEER","PUNAM23@GMAIL.COM");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into PARENT values(20,"PRERANA ABANDE","DELHI",65,30000,"DANCER","PRERANA23@GMAIL.COM");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from PARENT;
++------+-----------------+----------------+------+----------+---------------------+----------------------+
+| P_ID | P_NAME          | CITY           | AGE  | P_INCOME | P_OCCUPATION        | EMAILID              |
++------+-----------------+----------------+------+----------+---------------------+----------------------+
+|    1 | MADHAVI PAWAR   | PUNE           |   23 |   500000 | TEACHER             | MADHAVI123@GMAIL.COM |
+|    2 | VAISHNAVI PAWAR | MUMBAI         |   25 |   600000 | CLERK               | VAISH623@GMAIL.COM   |
+|    3 | GEETU MANE      | NAGPUR         |   35 |    70000 | SOFTWARE ENGINEER   | GEETU623@GMAIL.COM   |
+|    4 | RAGHAV PRAKSH   | DELHI          |   34 |    90000 | MECHANICAL ENGINEER | RAGHAV23@GMAIL.COM   |
+|    5 | PRERANA BHOSALE | PUNE           |   33 |    90000 | CIVIL ENGINEER      | PRERANA23@GMAIL.COM  |
+|    6 | NEHA LOHAR      | SATARA         |   33 |    80000 | TEACHER             | NEHA23@GMAIL.COM     |
+|    7 | SEEMA PATIL     | MUMBAI         |   33 |    12000 | HOUSE WIFE          | SEEMA23@GMAIL.COM    |
+|    8 | RADHA DALVI     | KATRAJ         |   33 |    18000 | DANCER              | RADHA23@GMAIL.COM    |
+|    9 | RAJU KHAN       | AKURDI         |   30 |    45000 | FIREMEN             | RAJU23@GMAIL.COM     |
+|   10 | ANU THAKUR      | DEHU           |   30 |    40000 | SHIEF               | ANU23@GMAIL.COM      |
+|   11 | TANU BHISTE     | MOSHI          |   27 |    49000 | POLICE              | TANU23@GMAIL.COM     |
+|   12 | ARTI BHAKARE    | ALANDI         |   38 |    13000 | HOUSE WIFE          | ARTI23@GMAIL.COM     |
+|   13 | SAKASHI KACHARE | NIGIDI         |   48 |    35000 | DR.                 | SAKASHI23@GMAIL.COM  |
+|   14 | GAURI PAWAR     | NIGIDI         |   50 |    37000 | DENTIST             | GAURI23@GMAIL.COM    |
+|   15 | PANKAJ GAWARE   | HAPUR          |   24 |    35600 | COMPUTER ENGINEER   | PANAKJ23@GMAIL.COM   |
+|   16 | SHUBHAM GHADAGE | AKURDI STATION |   22 |    60000 | CIVIL ENGINEER      | SHUBHAM23@GMAIL.COM  |
+|   17 | SHRUSHTI NALE   | MOSHI          |   45 |    38000 | TEACHER             | SHRUSHTI23@GMAIL.COM |
+|   18 | SUSHANT SUTAR   | PUNE STATION   |   49 |    20000 | WRITER              | SUSHASNT23@GMAIL.COM |
+|   19 | PUNAM SUTAR     | DELHI          |   55 |    10000 | TRAINEER            | PUNAM23@GMAIL.COM    |
+|   20 | PRERANA ABANDE  | DELHI          |   65 |    30000 | DANCER              | PRERANA23@GMAIL.COM  |
++------+-----------------+----------------+------+----------+---------------------+----------------------+
+20 rows in set (0.00 sec)
+
+mysql> update PARENT SET EMAILID="NULL";
+Query OK, 20 rows affected (0.09 sec)
+Rows matched: 20  Changed: 20  Warnings: 0
+
+mysql> select * from PARENT;
++------+-----------------+----------------+------+----------+---------------------+---------+
+| P_ID | P_NAME          | CITY           | AGE  | P_INCOME | P_OCCUPATION        | EMAILID |
++------+-----------------+----------------+------+----------+---------------------+---------+
+|    1 | MADHAVI PAWAR   | PUNE           |   23 |   500000 | TEACHER             | NULL    |
+|    2 | VAISHNAVI PAWAR | MUMBAI         |   25 |   600000 | CLERK               | NULL    |
+|    3 | GEETU MANE      | NAGPUR         |   35 |    70000 | SOFTWARE ENGINEER   | NULL    |
+|    4 | RAGHAV PRAKSH   | DELHI          |   34 |    90000 | MECHANICAL ENGINEER | NULL    |
+|    5 | PRERANA BHOSALE | PUNE           |   33 |    90000 | CIVIL ENGINEER      | NULL    |
+|    6 | NEHA LOHAR      | SATARA         |   33 |    80000 | TEACHER             | NULL    |
+|    7 | SEEMA PATIL     | MUMBAI         |   33 |    12000 | HOUSE WIFE          | NULL    |
+|    8 | RADHA DALVI     | KATRAJ         |   33 |    18000 | DANCER              | NULL    |
+|    9 | RAJU KHAN       | AKURDI         |   30 |    45000 | FIREMEN             | NULL    |
+|   10 | ANU THAKUR      | DEHU           |   30 |    40000 | SHIEF               | NULL    |
+|   11 | TANU BHISTE     | MOSHI          |   27 |    49000 | POLICE              | NULL    |
+|   12 | ARTI BHAKARE    | ALANDI         |   38 |    13000 | HOUSE WIFE          | NULL    |
+|   13 | SAKASHI KACHARE | NIGIDI         |   48 |    35000 | DR.                 | NULL    |
+|   14 | GAURI PAWAR     | NIGIDI         |   50 |    37000 | DENTIST             | NULL    |
+|   15 | PANKAJ GAWARE   | HAPUR          |   24 |    35600 | COMPUTER ENGINEER   | NULL    |
+|   16 | SHUBHAM GHADAGE | AKURDI STATION |   22 |    60000 | CIVIL ENGINEER      | NULL    |
+|   17 | SHRUSHTI NALE   | MOSHI          |   45 |    38000 | TEACHER             | NULL    |
+|   18 | SUSHANT SUTAR   | PUNE STATION   |   49 |    20000 | WRITER              | NULL    |
+|   19 | PUNAM SUTAR     | DELHI          |   55 |    10000 | TRAINEER            | NULL    |
+|   20 | PRERANA ABANDE  | DELHI          |   65 |    30000 | DANCER              | NULL    |
++------+-----------------+----------------+------+----------+---------------------+---------+
+20 rows in set (0.00 sec)
+mysql> update PARENT SET CITY="CHENNAI" where P_ID=11;
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from PARENT;
++------+-----------------+----------------+------+----------+---------------------+---------+
+| P_ID | P_NAME          | CITY           | AGE  | P_INCOME | P_OCCUPATION        | EMAILID |
++------+-----------------+----------------+------+----------+---------------------+---------+
+|    1 | MADHAVI PAWAR   | PUNE           |   23 |   500000 | TEACHER             | NULL    |
+|    2 | VAISHNAVI PAWAR | MUMBAI         |   25 |   600000 | CLERK               | NULL    |
+|    3 | GEETU MANE      | NAGPUR         |   35 |    70000 | SOFTWARE ENGINEER   | NULL    |
+|    4 | RAGHAV PRAKSH   | DELHI          |   34 |    90000 | MECHANICAL ENGINEER | NULL    |
+|    5 | PRERANA BHOSALE | PUNE           |   33 |    90000 | CIVIL ENGINEER      | NULL    |
+|    6 | NEHA LOHAR      | SATARA         |   33 |    80000 | TEACHER             | NULL    |
+|    7 | SEEMA PATIL     | MUMBAI         |   33 |    12000 | HOUSE WIFE          | NULL    |
+|    8 | RADHA DALVI     | KATRAJ         |   33 |    18000 | DANCER              | NULL    |
+|    9 | RAJU KHAN       | AKURDI         |   30 |    45000 | FIREMEN             | NULL    |
+|   10 | ANU THAKUR      | DEHU           |   30 |    40000 | SHIEF               | NULL    |
+|   11 | TANU BHISTE     | CHENNAI        |   27 |    49000 | POLICE              | NULL    |
+|   12 | ARTI BHAKARE    | ALANDI         |   38 |    13000 | HOUSE WIFE          | NULL    |
+|   13 | SAKASHI KACHARE | NIGIDI         |   48 |    35000 | DR.                 | NULL    |
+|   14 | GAURI PAWAR     | NIGIDI         |   50 |    37000 | DENTIST             | NULL    |
+|   15 | PANKAJ GAWARE   | HAPUR          |   24 |    35600 | COMPUTER ENGINEER   | NULL    |
+|   16 | SHUBHAM GHADAGE | AKURDI STATION |   22 |    60000 | CIVIL ENGINEER      | NULL    |
+|   17 | SHRUSHTI NALE   | MOSHI          |   45 |    38000 | TEACHER             | NULL    |
+|   18 | SUSHANT SUTAR   | PUNE STATION   |   49 |    20000 | WRITER              | NULL    |
+|   19 | PUNAM SUTAR     | DELHI          |   55 |    10000 | TRAINEER            | NULL    |
+|   20 | PRERANA ABANDE  | DELHI          |   65 |    30000 | DANCER              | NULL    |
++------+-----------------+----------------+------+----------+---------------------+---------+
+20 rows in set (0.00 sec)
+mysql> select * from PARENT where CITY in('AHEMEDABAD','DELHI','MUMBAI','CHENNAI','BANGLORE');
++------+-----------------+---------+------+----------+---------------------+---------+
+| P_ID | P_NAME          | CITY    | AGE  | P_INCOME | P_OCCUPATION        | EMAILID |
++------+-----------------+---------+------+----------+---------------------+---------+
+|    2 | VAISHNAVI PAWAR | MUMBAI  |   25 |   600000 | CLERK               | NULL    |
+|    4 | RAGHAV PRAKSH   | DELHI   |   34 |    90000 | MECHANICAL ENGINEER | NULL    |
+|    7 | SEEMA PATIL     | MUMBAI  |   33 |    12000 | HOUSE WIFE          | NULL    |
+|   11 | TANU BHISTE     | CHENNAI |   27 |    49000 | POLICE              | NULL    |
+|   19 | PUNAM SUTAR     | DELHI   |   55 |    10000 | TRAINEER            | NULL    |
+|   20 | PRERANA ABANDE  | DELHI   |   65 |    30000 | DANCER              | NULL    |
++------+-----------------+---------+------+----------+---------------------+---------+
+6 rows in set (0.00 sec)
+
+mysql> select * from PARENT where P_INCOME<500000 or AGE>45;
++------+-----------------+----------------+------+----------+---------------------+---------+
+| P_ID | P_NAME          | CITY           | AGE  | P_INCOME | P_OCCUPATION        | EMAILID |
++------+-----------------+----------------+------+----------+---------------------+---------+
+|    3 | GEETU MANE      | NAGPUR         |   35 |    70000 | SOFTWARE ENGINEER   | NULL    |
+|    4 | RAGHAV PRAKSH   | DELHI          |   34 |    90000 | MECHANICAL ENGINEER | NULL    |
+|    5 | PRERANA BHOSALE | PUNE           |   33 |    90000 | CIVIL ENGINEER      | NULL    |
+|    6 | NEHA LOHAR      | SATARA         |   33 |    80000 | TEACHER             | NULL    |
+|    7 | SEEMA PATIL     | MUMBAI         |   33 |    12000 | HOUSE WIFE          | NULL    |
+|    8 | RADHA DALVI     | KATRAJ         |   33 |    18000 | DANCER              | NULL    |
+|    9 | RAJU KHAN       | AKURDI         |   30 |    45000 | FIREMEN             | NULL    |
+|   10 | ANU THAKUR      | DEHU           |   30 |    40000 | SHIEF               | NULL    |
+|   11 | TANU BHISTE     | CHENNAI        |   27 |    49000 | POLICE              | NULL    |
+|   12 | ARTI BHAKARE    | ALANDI         |   38 |    13000 | HOUSE WIFE          | NULL    |
+|   13 | SAKASHI KACHARE | NIGIDI         |   48 |    35000 | DR.                 | NULL    |
+|   14 | GAURI PAWAR     | NIGIDI         |   50 |    37000 | DENTIST             | NULL    |
+|   15 | PANKAJ GAWARE   | HAPUR          |   24 |    35600 | COMPUTER ENGINEER   | NULL    |
+|   16 | SHUBHAM GHADAGE | AKURDI STATION |   22 |    60000 | CIVIL ENGINEER      | NULL    |
+|   17 | SHRUSHTI NALE   | MOSHI          |   45 |    38000 | TEACHER             | NULL    |
+|   18 | SUSHANT SUTAR   | PUNE STATION   |   49 |    20000 | WRITER              | NULL    |
+|   19 | PUNAM SUTAR     | DELHI          |   55 |    10000 | TRAINEER            | NULL    |
+|   20 | PRERANA ABANDE  | DELHI          |   65 |    30000 | DANCER              | NULL    |
++------+-----------------+----------------+------+----------+---------------------+---------+
+18 rows in set (0.00 sec)
